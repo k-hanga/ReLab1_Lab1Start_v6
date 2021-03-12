@@ -29,7 +29,9 @@ public class Main {
 			EObject content = iterator.next();
 			if(content instanceof State) {
 				State state = (State) content;
-				System.out.println(state.getName());
+				for(Transition t: state.getOutgoingTransitions()) {
+					System.out.println(state.getName()+" -> "+t.getTarget().getName());
+				}
 			}
 		}
 		
