@@ -30,10 +30,6 @@ public class Main {
 			if(content instanceof State) {
 				State state = (State) content;
 				System.out.println(state.getName());
-				if(state.getName()==null && state.getName()!="WithoutName") {
-					state.setName("WithoutName");
-					System.out.println("Change name to > " + state.getName());
-				}
 			}
 		}
 		
